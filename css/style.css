@@ -111,3 +111,6 @@ body {
   grid-template-columns: 4.5rem 1fr;
   gap: 0.5rem;
 }
+h1, h2, h3, small, #user-info, .table td {
+  overflow-wrap: anywhere;
+}
