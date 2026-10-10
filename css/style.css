@@ -92,3 +92,22 @@ body {
     font-size: 0.85rem;
   }
 }
+/* ===== Layout: Flexbox ===== */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.navbar > .d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== Layout: CSS Grid ===== */
+#activity-log li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.5rem;
+}
