@@ -249,34 +249,14 @@ document.getElementById('cart-items').addEventListener('click', function (e) {
   if (removeBtn) removeFromCart(Number(removeBtn.dataset.index));
 });
 
-const searchBox = document.getElementById('search');
-const clearBtn = document.getElementById('clear-search');
-
-searchBox.addEventListener('input', function (e) {
-  searchText = e.target.value;
-  clearBtn.classList.toggle('d-none', searchText === '');
-  if (searchText.trim() !== '') {
-    activeCategory = 'All';
-    renderFilters();
-  }
-  renderProducts();
-});
-
-clearBtn.addEventListener('click', function () {
-  searchBox.value = '';
-  searchText = '';
-  clearBtn.classList.add('d-none');
-  renderProducts();
-  searchBox.focus();
-});
- {
+document.getElementById('search').addEventListener('input', function (e) {
   searchText = e.target.value;
   if (searchText.trim() !== '') {
     activeCategory = 'All';
     renderFilters();
   }
   renderProducts();
-};
+});
 
 // Sync: when another tab changes this room's data, re-draw the cart
 window.addEventListener('storage', function (e) {
